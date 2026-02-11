@@ -1,0 +1,7 @@
+ursina
+numpy
+scipy
+# git+https://github.com/utiasDSL/gym-pybullet-drones.git
+salabim
+pandas
+# pybullet
