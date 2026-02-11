@@ -1,0 +1,124 @@
+{
+    "window": {
+        "title": "Counter-UAS Defense Simulation",
+        "width": 1600,
+        "height": 900,
+        "fullscreen": false
+    },
+    "economy": {
+        "start_budget": 1000000,
+        "reward_kill": 500,
+        "cost_laser_operation": 10,
+        "cost_missile_launch": 500
+    },
+    "colors_hex": {
+        "background": "#000000",
+        "grid": "#FFFFFF32",
+        "hud_bg": "#00000064",
+        "text": "#FFFFFF",
+        "red_team": "#FF3232",
+        "blue_team": "#3296FF",
+        "laser": "#00FFFF",
+        "missile": "#FFC800",
+        "explosion": "#FF6400"
+    },
+    "units": {
+        "shahed": {
+            "health": 50,
+            "speed": 12,
+            "value": 20000,
+            "scale": 0.8
+        },
+        "mavic": {
+            "health": 10,
+            "speed": 8,
+            "value": 1000,
+            "scale": 0.3
+        },
+        "kalibr": {
+            "health": 150,
+            "speed": 45,
+            "value": 6500000,
+            "scale_z": 2.0,
+            "jink_range": 250
+        },
+        "kinzhal": {
+            "health": 300,
+            "speed": 80,
+            "value": 10000000,
+            "scale": 1.0,
+            "spawn_height": 200
+        }
+    },
+    "defenses": {
+        "dragonfire": {
+            "range": 250,
+            "cooldown": 0.0,
+            "cost": 5,
+            "required_dwell_time": 0.4
+        },
+        "gepard": {
+            "range": 150,
+            "cooldown": 0.08,
+            "cost": 100,
+            "burst_count": 3
+        },
+        "patriot": {
+            "range": 400,
+            "cooldown": 2.0,
+            "cost": 5000,
+            "missile_speed": 60,
+            "missile_damage": 500
+        }
+    },
+    "scenario_timeline": [
+        {
+            "time": 1.0,
+            "type": "MAV",
+            "count": 3,
+            "desc": "PHASE 1: Scout Probes (Mavic)"
+        },
+        {
+            "time": 5.0,
+            "type": "SHA",
+            "count": 10,
+            "desc": "PHASE 2: Probing Swarm (Shahed)"
+        },
+        {
+            "time": 12.0,
+            "type": "KIN",
+            "count": 1,
+            "desc": "PHASE 3: Hypersonic Test (Kinzhal)"
+        },
+        {
+            "time": 18.0,
+            "type": "SHA",
+            "count": 20,
+            "desc": "PHASE 4: MAIN ASSAULT (Saturation)"
+        },
+        {
+            "time": 25.0,
+            "type": "KAL",
+            "count": 2,
+            "desc": "PHASE 5: Heavy Strike (Kalibr)"
+        },
+        {
+            "time": 28.0,
+            "type": "MAV",
+            "count": 10,
+            "desc": "PHASE 6: Low Altitude Flank"
+        },
+        {
+            "time": 35.0,
+            "type": "KIN",
+            "count": 3,
+            "desc": "PHASE 7: DECAPITATION STRIKE"
+        },
+        {
+            "time": 45.0,
+            "type": "END",
+            "count": 0,
+            "desc": "Scenario Complete"
+        }
+    ]
+}
