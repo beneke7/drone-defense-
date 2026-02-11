@@ -1,0 +1,28 @@
+{
+    "simulation": {
+        "radar_power": 10000.0,
+        "detection_threshold": 10.0,
+        "noise_level": 1.0,
+        "dt": 0.01667
+    },
+    "unit_types": {
+        "Decoy": {
+            "rcs": 5.0,
+            "speed": 30.0,
+            "cost": 100,
+            "description": "High RCS, Low Cost, Slow"
+        },
+        "Shahed": {
+            "rcs": 0.05,
+            "speed": 50.0,
+            "cost": 20000,
+            "description": "Low RCS, Slow Speed, Kamikaze"
+        },
+        "Kalibr": {
+            "rcs": 0.5,
+            "speed": 280.0,
+            "cost": 6500000,
+            "description": "Medium RCS, High Speed, Cruise Missile"
+        }
+    }
+}
