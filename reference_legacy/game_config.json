@@ -6,10 +6,10 @@
         "fullscreen": false
     },
     "economy": {
-        "start_budget": 1000000,
-        "reward_kill": 500,
-        "cost_laser_operation": 10,
-        "cost_missile_launch": 500
+        "start_budget": 3000000,
+        "reward_kill": 5000,
+        "cost_laser_operation": 15,
+        "cost_missile_launch": 4000000
     },
     "colors_hex": {
         "background": "#000000",
@@ -23,65 +23,72 @@
         "explosion": "#FF6400"
     },
     "units": {
-        "shahed": {
-            "health": 50,
-            "speed": 12,
-            "value": 20000,
-            "scale": 0.8
-        },
         "mavic": {
-            "health": 10,
-            "speed": 8,
-            "value": 1000,
-            "scale": 0.3
+            "health": 20,
+            "speed": 10,
+            "value": 3000,
+            "scale": 0.3,
+            "spawn_distance": 250
+        },
+        "shahed": {
+            "health": 100,
+            "speed": 25,
+            "value": 50000,
+            "scale": 1.0,
+            "spawn_distance": 350
         },
         "kalibr": {
-            "health": 150,
-            "speed": 45,
-            "value": 6500000,
+            "health": 400,
+            "speed": 120,
+            "value": 1000000,
             "scale_z": 2.0,
-            "jink_range": 250
+            "jink_range": 200,
+            "spawn_distance": 1000
         },
         "kinzhal": {
-            "health": 300,
-            "speed": 80,
+            "health": 600,
+            "speed": 100,
             "value": 10000000,
             "scale": 1.0,
-            "spawn_height": 200
+            "spawn_height": 250,
+            "spawn_distance": 1300
         }
     },
     "defenses": {
         "dragonfire": {
-            "range": 250,
+            "range": 200,
             "cooldown": 0.0,
-            "cost": 5,
-            "required_dwell_time": 0.4
+            "cost": 15,
+            "required_dwell_time": 0.5,
+            "damage": 10
         },
         "gepard": {
-            "range": 150,
-            "cooldown": 0.08,
-            "cost": 100,
-            "burst_count": 3
+            "range": 250,
+            "cooldown": 0.1,
+            "cost": 600,
+            "burst_count": 1,
+            "damage": 50,
+            "max_spread": 0.03
         },
         "patriot": {
-            "range": 400,
+            "range": 1500,
             "cooldown": 2.0,
-            "cost": 5000,
-            "missile_speed": 60,
-            "missile_damage": 500
+            "cost": 40000,
+            "missile_speed": 400,
+            "missile_damage": 700
         }
     },
     "scenario_timeline": [
         {
             "time": 1.0,
             "type": "MAV",
-            "count": 3,
+            "count": 100,
             "desc": "PHASE 1: Scout Probes (Mavic)"
         },
         {
             "time": 5.0,
             "type": "SHA",
-            "count": 10,
+            "count": 20,
             "desc": "PHASE 2: Probing Swarm (Shahed)"
         },
         {
@@ -91,27 +98,27 @@
             "desc": "PHASE 3: Hypersonic Test (Kinzhal)"
         },
         {
-            "time": 18.0,
+            "time": 14.0,
             "type": "SHA",
             "count": 20,
             "desc": "PHASE 4: MAIN ASSAULT (Saturation)"
         },
         {
-            "time": 25.0,
+            "time": 17.0,
             "type": "KAL",
-            "count": 2,
+            "count": 6,
             "desc": "PHASE 5: Heavy Strike (Kalibr)"
         },
         {
-            "time": 28.0,
+            "time": 20.0,
             "type": "MAV",
             "count": 10,
             "desc": "PHASE 6: Low Altitude Flank"
         },
         {
-            "time": 35.0,
+            "time": 25.0,
             "type": "KIN",
-            "count": 3,
+            "count": 10,
             "desc": "PHASE 7: DECAPITATION STRIKE"
         },
         {
